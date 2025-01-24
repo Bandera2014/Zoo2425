@@ -1,4 +1,4 @@
-public class Pikachu extends Animal {
+public class Pikachu extends Animal implements Walking {
     public Pikachu(){
         super("Pika","Electrified Rat...  but cuter");
     }
@@ -8,5 +8,9 @@ public class Pikachu extends Animal {
         return "Pikaaaaaaaaaa CHHHHUUU!!!!!!!!!!!!!!!!!";
     }
 
+    @Override
+    public String walk(){
+        return "Quick Attack!";
+    }
     
 }

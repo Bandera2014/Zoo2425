@@ -105,6 +105,12 @@ public class Zoo2425
      
      public static String lookAround(List<Animal> animals){
           String msg="";
+          for(Animal a: animals){
+               if(a instanceof Walking){
+                    Walking w = (Walking) a;
+                    msg+=a.getName()+":\n\t"+w.walk()+"\n";
+               }
+          }
           return msg;
      }
      
@@ -167,5 +173,14 @@ public class Zoo2425
           animals.add(new BayleTheDread());
           animals.add(new Leviathan());
           animals.add(new Falcon());
+
+          /*
+           * Polymorphism - Able to make an object of one type be dfined as an object of another type
+           *                  1. Makes the type more general in case you need other methods and character
+           *                       Shape tri = new Triange(name, size);
+           *                       Lightsaber longSword = new Sword(name,size);
+           *                  2. Code reusability - able to pass in default parameters
+           *                       Lightsaber longSword inherits the strength and material while inheriting the Sword methods
+           */
      }
 }

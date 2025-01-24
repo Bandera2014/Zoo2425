@@ -1,4 +1,4 @@
-public class Dragon extends Animal implements Flying{
+public class Dragon extends Animal implements Flying, Walking{
     public Dragon(){
         super("Drago", "Huge Monster that breathes fire");
     }
@@ -9,5 +9,9 @@ public class Dragon extends Animal implements Flying{
     @Override
     public String fly() {
         return "First you need to train me to fly";
+    }
+    @Override
+    public String walk(){
+        return "stomp and move like sneek";
     }
 }
